@@ -14,7 +14,7 @@ FROM tomcat:10.1-jdk17-temurin
 RUN rm -rf /usr/local/tomcat/webapps/*
 
 # Copy WAR from builder stage
-COPY --from=builder /app/target/ReportProject.war /usr/local/tomcat/webapps/ROOT.war
+COPY --from=builder /app/target/ReportProject-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
 
 # Expose Tomcat port
 EXPOSE 8080
